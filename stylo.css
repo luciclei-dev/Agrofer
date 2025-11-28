@@ -1,0 +1,621 @@
+
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* remove rolagem horizontal */
+}
+
+header {
+  background-color: #256133;
+  padding: 3px 10px; /* menos padding = header mais baixo */
+  width: 100%;
+}
+
+.container-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo img {
+  height: 100px;
+  width: 150px;
+  margin-left: 10px;
+  
+}
+
+.login-sair {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #dddfe1;
+  font-size: 1rem;
+  font-weight: bold;
+  gap: 10px;
+  width: 150px;
+ 
+}
+
+
+a.login{
+  text-decoration: none;
+}
+
+a.login:hover{
+  text-decoration: none;
+  color: #25d366;
+}
+
+
+/* Campo de pesquisa */
+.campo-pesquisa {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin: 10px 20px;
+}
+
+.campo-pesquisa form {
+  display: flex;
+  width: 100%;
+  max-width: 400px;
+}
+
+.campo-pesquisa input[type="search"] {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 25px 0 0 25px;
+  font-size: 14px;
+}
+
+.campo-pesquisa button {
+  width: 40px;
+  border: none;
+  background: #dddfe1;
+  color: #fff;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+}
+
+.campo-pesquisa button:hover {
+  background: #bcd5e7;
+}
+
+
+/* carrinho */
+
+.carrinho img {
+  
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  
+}
+
+.carrinho img {
+  height: 30px;
+  width: 30px;
+}
+
+/*watzapp-flutuante*/
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px; /* distância do rodapé */
+  right: 20px;  /* distância da lateral direita */
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: transform 0.2s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1); /* efeito de zoom ao passar o mouse */
+}
+
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
+}
+/* ============ MENU LATERAL OFFCANVAS ============ */
+.offcanvas {
+  width: 5px;
+  background-color: #256133; /* mesma cor do header */
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid #8fefa5; /* linha verde clara */
+}
+
+/* Links do menu lateral */
+.offcanvas .nav-link {
+  color: #dddfe1;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+}
+
+.offcanvas .nav-link:hover {
+  background-color: #198754; /* verde mais claro */
+  color: #ffffff;
+}
+
+/* Botão hamburguer */
+.navbar-toggler {
+  border-color: #fff;
+}
+
+.navbar-toggler img {
+  filter: brightness(100%);
+  transition: transform 0.2s ease;
+}
+
+.navbar-toggler:hover img {
+  transform: scale(1.1);
+}
+
+/* Logo e links grandes */
+.navbar-nav .nav-link {
+  color: #cbd9cb;
+  font-weight: 500;
+  margin: 0 10px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #8fefa5;
+}
+
+
+
+.carrossel{
+margin-top: 1px;
+
+}
+
+#carouselExampleRide .carousel-inner {
+  width: 100%;
+  height: 400px; /* altura desejada para desktop */
+  margin: 0;
+}
+
+#carouselExampleRide .carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* cobre o espaço sem deformar */
+  box-shadow: 0px 0px 6px rgb(10, 10, 10);
+}
+
+
+.produtos{
+  margin-top: 50px;
+}
+/*estilizaçao de cards de produtos*/
+h2.produtos{
+  margin-left: 20px;
+  color: #333;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  
+
+}
+
+.card {
+  box-shadow: 0px 0px 2px black;
+  width: 100%;           /* ocupa 100% do espaço da coluna */
+  max-width: 250px;      /* nunca ultrapassa 250px */
+  margin: auto;          /* centraliza quando tiver espaço sobrando */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img.card-img-top {
+  height: 100px;
+  margin-top: 20px;
+
+}
+.card:hover{
+  box-shadow: 0px 0px 4px rgb(4, 90, 20) ;
+}
+.card img{
+  width: 100px;
+}
+.card-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/*AGENDAMENTO BANHO E TOSA */
+/* ======== Seção banho-tosa ======== */
+.banho-tosa {
+  width: 100%;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.agendamentos-tosa {
+  background-color: #e4ecec;
+  max-width: 1200px;
+  width: 100vw;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* centraliza verticalmente esquerda e direita */
+  gap: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px rgb(143, 142, 142);
+}
+
+/* ======== Esquerda: título e botão ======== */
+.h2-botao-agenda {
+  flex: 1 1 50%;
+  text-align: center; /* deixa o h2 centralizado */
+  width: 400px;
+  
+}
+
+.h2-botao-agenda h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1c334b;
+  margin-bottom: 30px;
+  
+}
+
+.h2-botao-agenda button {
+  display: block;       /* vira bloco */
+  width: 100%;          /* ocupa a largura toda */
+  max-width: 300px;     /* opcional: limita a largura máxima */
+  margin: 0 auto;       /* centraliza */
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid rgb(131, 130, 130);
+  border-radius: 6px;
+  background-color: #157347;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.h2-botao-agenda button:hover {
+ background-color:  rgb(4, 90, 20) ;
+}
+
+
+/*  Direita: imagem de agendamento  */
+.imagem-agenda {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.imagem-agenda img {
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+}
+/* Footer  */
+.footer {
+  background-color: #256133; /* cor de fundo */
+  color: #fff;
+  padding: 40px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* permite responsividade */
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.footer div {
+  flex: 1 1 30%; /* cada coluna ocupa até 30% */
+  min-width: 250px;
+}
+
+.logo-footer img {
+  max-width: 150px;
+  height: auto;
+}
+
+.descricao-footer p {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.sociais-footer a {
+  display: block;
+  color: #ffcc00; /* cor chamativa para links */
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.sociais-footer a:hover {
+  color: #ffffff;
+}
+
+/* ESTILIZAÇAO DE PAGINA SERVIÇOS-BANHO E TOSA */
+.servicos {
+  width: 100%;
+  max-width: 1200px; /* limita largura máxima em telas grandes */
+  margin: 0 auto; /* centraliza */
+  padding: 60px 20px; /* respiro interno */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap; /* evita quebra ruim em telas pequenas */
+  background: #f9f9f9;
+  box-sizing: border-box; /* evita somar padding na largura */
+}
+
+
+.text-servicos {
+  flex: 1 1 400px; /* ocupa espaço flexível, mínimo 400px */
+  max-width: 600px;
+  font-weight: bold;
+}
+
+.h2-servicos {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.paragrafo-servicos {
+  font-size: 1.1rem;
+  line-height: 1.6; /* espaçamento entre linhas para leitura */
+  color: #555;
+  text-align: justify;
+}
+
+.img-servicos img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: block; /* evita pequenos "vazamentos" */
+}
+
+
+.img-servicos img {
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px; /* cantos arredondados */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* sombra suave */
+}
+
+/*ESTILIZAÇAO DE QUEM SOMOS */
+
+.quem-somos {
+  background-color: #f5f5f5; /* fundo suave */
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.quem-somos h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+  
+}
+
+.quem-somos p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+ 
+}
+.img-quem-somos img {
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px; /* cantos arredondados */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* sombra suave */
+}
+/* Responsividades dos cardes */
+@media (min-width: 992px) {
+  .card {
+    max-width: 280px; /* um pouco maior */
+  }
+}
+
+/* Tablets */
+@media (max-width: 991px) {
+  .card {
+    max-width: 220px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 576px) {
+  .card {
+    max-width: 100%; /* ocupa a largura toda */
+  }
+}
+
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .quem-somos h2 {
+    font-size: 2rem;
+  }
+
+  .quem-somos p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .quem-somos h2 {
+    font-size: 1.8rem;
+  }
+
+  .quem-somos p {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* Responsividade serviços */
+@media (max-width: 768px) {
+  .servicos {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 15px; /* menos padding no mobile */
+  }
+
+  .h2-servicos {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .paragrafo-servicos {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .img-servicos {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container-header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .campo-pesquisa {
+    margin: 10px 0;
+  }
+
+  
+  
+  /* Navegaçao*/
+@media (max-width: 768px) {
+  .menu-principal ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-principal li {
+    margin: 5px 0;
+  }
+}
+
+
+
+/* Responsividade */
+@media (max-width: 992px) {
+  #carouselExampleRide .carousel-inner {
+    height: 250px; /* altura em tablets */
+  
+  }
+}
+
+@media (max-width: 1160px) {
+  #carouselExampleRide .carousel-inner img {
+    height: auto; /* telas grandes*/
+    
+  
+  }
+}
+
+
+@media (max-width: 768px) {
+  #carouselExampleRide .carousel-inner {
+    height: 200px; /* altura em celulares grandes */
+  }
+}
+
+@media (max-width: 576px) {
+  #carouselExampleRide .carousel-inner {
+    height: 150px; /* altura em celulares pequenos */
+    
+  }
+}
+/* Responsividade banho e tosa */
+@media (max-width: 768px) {
+  .agendamentos-tosa {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .h2-bostao-agenda {
+    flex: 1 1 100%;
+  }
+
+  .h2-bostao-agenda h2 {
+    font-size: 1.5rem;
+  }
+
+  .h2-bostao-agenda button {
+    margin-top: 15px;
+  }
+
+  .imagem-agenda {
+    flex: 1 1 100%;
+    margin-top: 20px;
+   
+  }
+   .imagem-agenda img{
+    width: 200px;
+    height: 200px;
+   
+  }
+}
+
+/* Responsividade  footer */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer div {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+
+  .logo-footer img {
+    max-width: 120px;
+  }
+}
+}

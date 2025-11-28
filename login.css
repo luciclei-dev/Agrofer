@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(208, 228, 216);
+}
+
+.conteudo {
+  width: 780px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
+  display: flex;
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.726);
+}
+
+/* --- Lateral com imagem --- */
+.pagina-lateral {
+  width: 400px;
+  background-color: rgb(10, 128, 26);
+}
+
+.pagina-lateral-bloco {
+  width: 100%;
+  height: 100%;
+  background-image: url("logo-agropecuaria-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-size: contain; /* para caber sem cortar */
+  background-position: center;
+}
+
+/* --- Formulário --- */
+#formulario {
+  width: 300px;
+  background-color: rgba(9, 144, 79, 0.783);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+h1 {
+  color: #f0ebeb;
+  font-size: 30px;
+}
+
+.form-group {
+  width: 100%;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  color: #f3eeee;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem 2rem;
+  border: 1px solid #e1dfdf;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: rgba(34, 122, 80, 0.598);
+  box-shadow: 0px 0px 1px 2px rgba(3, 67, 3, 0.189);
+  outline: none;
+}
+.form-group input:hover {
+  box-shadow: 0px 0px 4px rgb(61, 231, 106);
+}
+
+.form-group i {
+  position: absolute;
+  top: 65%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #f0ebeb;
+}
+input::placeholder {
+  color: rgba(216, 232, 214, 0.61);
+  opacity: 1;
+}
+
+
+.cadastro-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.cadastro-link:hover {
+  text-decoration: underline;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.75rem;
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  background-color: rgba(5, 97, 39, 0.993);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+.login-btn:hover {
+  background-color: #2c8c57;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+  .pagina-lateral {
+    width: 100%;
+    height: 200px;
+  }
+  .pagina-lateral-bloco {
+    height: 200px;
+  }
+  #formulario {
+    width: 100%;
+  }
+}
