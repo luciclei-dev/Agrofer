@@ -336,6 +336,18 @@ img.card-img-top {
   min-width: 250px;
 }
 
+.assinatura {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+
 .logo-footer img {
   max-width: 150px;
   height: auto;
@@ -619,3 +631,4 @@ img.card-img-top {
   }
 }
 }
+
